@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomie Kvíz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Anatomie Kvíz</h1>
+            <p>Test svých znalostí lidské anatomie</p>
+        </header>
+
+        <div id="quiz-container">
+            <div id="start-screen" class="screen active">
+                <h2>Vítejte v anatomickém kvízu!</h2>
+                <p>Tento kvíz obsahuje otázky o lidské anatomii. Otestujte své znalosti!</p>
+                <button id="start-btn" class="btn btn-primary">Začít kvíz</button>
+            </div>
+
+            <div id="quiz-screen" class="screen">
+                <div class="quiz-header">
+                    <div class="progress-bar">
+                        <div id="progress" class="progress"></div>
+                    </div>
+                    <div class="question-counter">
+                        Otázka <span id="current-question">1</span> z <span id="total-questions">10</span>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <h3 id="question-text">Zde bude otázka</h3>
+                    <div id="image-container" class="image-container" style="display: none;">
+                        <img id="question-image" src="" alt="Anatomický obrázek">
+                    </div>
+                    <div id="answers-container" class="answers-container">
+                        <!-- Odpovědi budou vloženy dynamicky -->
+                    </div>
+                </div>
+
+                <div class="quiz-controls">
+                    <button id="next-btn" class="btn btn-primary" disabled>Další otázka</button>
+                </div>
+            </div>
+
+            <div id="results-screen" class="screen">
+                <h2>Výsledky kvízu</h2>
+                <div class="results-container">
+                    <div class="score-circle">
+                        <span id="score-percentage">0%</span>
+                    </div>
+                    <p id="score-text">Odpověděl jste správně na 0 z 10 otázek</p>
+                    <div id="score-message" class="score-message"></div>
+                </div>
+                <div class="results-controls">
+                    <button id="restart-btn" class="btn btn-primary">Zkusit znovu</button>
+                    <button id="review-btn" class="btn btn-secondary">Prohlédnout odpovědi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# Development files
+.DS_Store
+.vscode/
+*.swp
+*.swo
+
+# Temporary files
+/tmp/
+*.tmp
+
+# Browser cache
+.cache/
+
+# Logs
+*.log
+
+# Build artifacts (if any are added later)
+dist/
+build/
